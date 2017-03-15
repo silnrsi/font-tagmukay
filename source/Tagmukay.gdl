@@ -1,0 +1,282 @@
+////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	File: Tifinagh.gdl
+//
+//	Graphite code file for TagmukaySIL
+//
+////////////////////////////////////////////////////////////////////////////////////////////
+
+/*
+Change history:
+SJC 2006-July	File created.
+SCJ 2011-Oct    Reworked
+*/
+
+
+#include "stddef.gdh"
+
+ScriptDirection = HORIZONTAL_LEFT_TO_RIGHT;
+Bidi = false;
+
+
+//******************************************************************************************
+//
+//	Glyph definitions
+//
+//******************************************************************************************
+
+table(glyph)
+
+// Encoded glyphs
+
+tifYa		= postscript("uni2D30");		// 2D30
+tifYaj		= postscript("uni2D36");		// 2D36
+tifYadd		= postscript("uni2D39");		// 2D39
+tifYaa		= postscript("uni2D3C");		// 2D3C
+tifTuarYak	= postscript("uni2D3E");		// 2D3E
+tifYah		= postscript("uni2D40");		// 2D40
+tifTuarYah	= postscript("uni2D42");		// 2D42
+tifTuarYakh	= postscript("uni2D46");		// 2D46
+tifTuarYaq	= postscript("uni2D48");		// 2D48
+tifYi_001	= postscript("uni2D49");		// 2D49
+tifTuarYazh	= postscript("uni2D4C");		// 2D4C
+tifTuarYal	= postscript("uni2D4D");		// 2D4D
+tifYam		= postscript("uni2D4E");		// 2D4E
+tifYan		= postscript("uni2D4F");		// 2D4F
+tifTuarYang	= postscript("uni2D51");		// 2D51
+tifYu		= postscript("uni2D53");		// 2D53
+tifYar		= postscript("uni2D54");		// 2D54
+tifTuarYagh	= postscript("uni2D57");		// 2D57
+tifYas		= postscript("uni2D59");		// 2D59
+tifYash		= postscript("uni2D5B");		// 2D5B
+tifYat		= postscript("uni2D5C");		// 2D5C
+tifYi		= postscript("uni2D62");		// 2D62
+tifYaz		= postscript("uni2D63");		// 2D63
+tifTawYaz	= postscript("uni2D64");		// 2D64
+g2D67       = postscript("uni2D67");		// 2D67
+g2D70       = postscript("uni2D70");		// 2D70
+
+tifBiConsJnr = postscript("uni2D7F");		// 2D7F biconsonant joiner
+
+
+// Unencoded glyphs
+
+// diacritics
+g_2D30_0302 = glyphid(292);
+g_2D30_0306 = glyphid(293);
+g_2D67_0302 = glyphid(295);
+g_2D53_0302 = glyphid(297);
+g_2D62_0302 = glyphid(317);
+g_2D62_0323 = glyphid(318);
+
+g_0302 = unicode(0x0302);	// circumflex
+c_no0302 =   (tifYa        g2D67        tifYu        tifYi);
+c_plus0302 = (g_2D30_0302  g_2D67_0302  g_2D53_0302  g_2D62_0302);
+
+g_0306 = unicode(0x0306);	// breve
+c_no0306 =   (tifYa);
+c_plus0306 = (g_2D30_0306);
+
+g_0323 = unicode(0x0323);	// dot below
+c_no0323 =   (tifYi);
+c_plus0323 = (g_2D62_0323);
+
+
+// contextual forms
+g_2D4F_slant = glyphid(310);	// kabyle yah
+g_2D4D_slant = glyphid(311);	// yahh
+
+// ligatures
+lig_2D4F_2D57 = glyphid(307);
+lig_2D4F_2D36 = glyphid(308);
+lig_2D4F_2D3E = glyphid(309);
+lig_2D4F_2D64 = glyphid(313);
+lig_2D4F_2D5C = glyphid(314);
+lig_2D4D_2D5C = glyphid(320);
+lig_2D54_2D5C = glyphid(323);
+lig_2D59_2D5C = glyphid(324);
+lig_2D4F_2D59 = glyphid(325);
+lig_2D4E_2D40 = glyphid(327);
+lig_2D4E_2D5C = glyphid(330);
+lig_2D4E_2D59 = glyphid(331);
+lig_2D4F_2D3C = glyphid(332);
+lig_2D3C_2D5C = glyphid(335);
+lig_2D4F_2D4C = glyphid(336);
+lig_2D4F_2D4C_alt = glyphid(339);
+lig_2D4F_2D39 = glyphid(337);
+lig_2D5B_2D5C = glyphid(341);
+
+lig_2D4F_2D3C_2D5C = glyphid(333);
+
+
+
+// Ligature classes
+
+cPreYat	=	// _ 2D5C
+//	 2D3C          2D4D          2D4E          2D54          2D59          2D5B
+	(tifYaa        tifTuarYal    tifYam        tifYar        tifYas        tifYash);
+cPlusYat =
+	(lig_2D3C_2D5C lig_2D4D_2D5C lig_2D4E_2D5C lig_2D54_2D5C lig_2D59_2D5C lig_2D5B_2D5C);
+//	yak            yath          yatt          yabh          yass          yach
+	
+cPostYan =	// 2D4F  _
+//   2D39          2D3C          2D4C          2D64          2D5C          2D57          2D36          2D59          2D3E     
+	(tifYadd       tifYaa        tifTuarYazh   tifTawYaz     tifYat        tifTuarYagh   tifYaj        tifYas        tifTuarYak);
+cYanPlus =
+	(lig_2D4F_2D39 lig_2D4F_2D3C lig_2D4F_2D4C lig_2D4F_2D64 lig_2D4F_2D5C lig_2D4F_2D57 lig_2D4F_2D36 lig_2D4F_2D59 lig_2D4F_2D3E);
+//	 yaddh         yazh          yakkh         yaq           yakh          yadh          yad           yarr          yagh
+	
+cPostYam =	// _ 2D4E
+//   2D40          2D59               295C - above
+	(tifYah        tifYas);        // tifYat
+cYamPlus =
+	(lig_2D4E_2D40 lig_2D4E_2D59); // lig_2D4E_2D5C
+//	yab            yaw
+
+
+cLig2 = (cPlusYat  cYanPlus  cYamPlus  lig_2D4F_2D4C_alt)
+	{component {
+	        cons1 = box(0, -descent,       aw*2/5, ascent);
+	        join  = box(aw*2/5, -descent,  aw*3/5, ascent);
+		    cons2 = box(aw*3/5, -descent,  aw, ascent)}};
+
+cLig3 = (lig_2D4F_2D3C_2D5C)
+	{component {
+	        cons1 = box(0, -descent,       aw*2/8, ascent);
+	        join1 = box(aw*2/8, -descent,  aw*3/8, ascent);
+		    cons2 = box(aw*3/8, -descent,  aw*5/8, ascent);
+		    join2 = box(aw*5/8, -descent,  aw*6/8, ascent);
+		    cons3 = box(aw*6/8, -descent,  aw, ascent)}};
+
+
+//	Roman alternates
+
+g_a = glyphid(68);
+g_agrave = glyphid(189);
+g_aacute = glyphid(190);
+g_acircumflex = glyphid(191);
+g_atilde = glyphid(192);
+g_abreve = glyphid(222);
+g_adieresis = glyphid(193);
+g_aring = glyphid(194);
+g_g = glyphid(74);
+
+
+g_a_alt = glyphid(282);
+g_agrave_alt = glyphid(283);
+g_aacute_alt = glyphid(284);
+g_acircumflex_alt = glyphid(285);
+g_atilde_alt = glyphid(286);
+g_abreve_alt = glyphid(287);
+g_adieresis_alt = glyphid(288);
+g_aring_alt = glyphid(289);
+g_g_alt = glyphid(290);
+
+c_a_g =     (g_a      g_agrave      g_aacute      g_acircumflex      g_atilde      g_abreve      g_adieresis      g_aring      g_g);
+c_a_g_alt = (g_a_alt  g_agrave_alt  g_aacute_alt  g_acircumflex_alt  g_atilde_alt  g_abreve_alt  g_adieresis_alt  g_aring_alt  g_g_alt);
+
+
+endtable;  // glyph
+
+
+//******************************************************************************************
+//
+//	Feature definitions
+//
+//******************************************************************************************
+
+table(feature)
+
+enja {
+	id = "enja";	
+	name.1033 = string("Enja alternate");
+	default = ffalse;
+    settings {
+        ffalse {
+            value = 0;
+            name.1033 = string("False");
+        }
+        ftrue {
+            value = 1;
+            name.1033 = string("True");
+        } \
+    }
+}
+
+// Roman alternates
+ralt {
+	id = "ralt";	
+	name.1033 = string("Lowercase a and g alternates");
+	default = ffalse;
+    settings {
+        ffalse {
+            value = 0;
+            name.1033 = string("False");
+        }
+        ftrue {
+            value = 1;
+            name.1033 = string("True");
+        } \
+    }
+}
+
+endtable;	// feature
+
+
+//******************************************************************************************
+//
+//	Rules
+//
+//******************************************************************************************
+
+table(substitution)
+
+pass(1)
+
+//	Ligatures
+
+cPreYat tifBiConsJnr  tifYat    >  cPlusYat:(1 2 3) {comp {cons1.ref = @1; join.ref = @2; cons2.ref = @3}}  _  _ ;
+tifYan  tifBiConsJnr  cPostYan  >  _  _  cYanPlus:(1 2 3) {comp {cons1.ref = @1; join.ref = @2; cons2.ref = @3}} ;
+tifYam  tifBiConsJnr  cPostYam  >  _  _  cYamPlus:(1 2 3) {comp {cons1.ref = @1; join.ref = @2; cons2.ref = @3}} ;
+
+tifYan  tifBiConsJnr  tifYaa  tifBiConsJnr  tifYat  
+	>  lig_2D4F_2D3C_2D5C:(1 2 3 4 5) {comp {cons1.ref = @1; join1.ref = @2; cons2.ref = @3; join2.ref = @4; cons3.ref = @5}}  _  _  _  _ ;
+
+
+//	Contextual alternates
+
+(tifYan tifTuarYal)  tifYan      >  @1  g_2D4F_slant;
+(tifYan tifTuarYal)  tifTuarYal  >  @1  g_2D4D_slant;
+
+
+//	Diacritics
+
+c_no0302  g_0302  >  c_plus0302:(1 2)  _;
+c_no0306  g_0306  >  c_plus0306:(1 2)  _;
+c_no0323  g_0323  >  c_plus0323:(1 2)  _;
+
+endpass;
+
+
+pass(2)
+
+// JDC: 2013-07-05 Needed when an L (2D4D) or N (2D4F) precedes a ligature beginning with L or N
+g_2D4D_slant tifBiConsJnr  tifYat    >  lig_2D4D_2D5C:(1 2 3) {comp {cons1.ref = @1; join.ref = @2; cons2.ref = @3}}  _  _ ;
+g_2D4F_slant  tifBiConsJnr  cPostYan  >  _  _  cYanPlus:(1 2 3) {comp {cons1.ref = @1; join.ref = @2; cons2.ref = @3}} ;
+
+if (enja)
+
+lig_2D4F_2D4C  >  lig_2D4F_2D4C_alt;
+
+endif;
+
+if (ralt)
+
+c_a_g  >  c_a_g_alt;
+
+endif;
+
+endpass;
+
+
+endtable;  // sub
