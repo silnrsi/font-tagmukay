@@ -32,6 +32,7 @@ for ext in ('-Regular', '-Bold') :
 		graphite = gdl ( 'source/Tagmukay.gdl', no_make = 1),
 		script = ['tfng'],
 		pdf = fret(),
+		woff = woff(params = '-v ' + VERSION + ' -m ../source/Tagmukay-WOFF-metadata.xml'),
 	)
 
 def configure(ctx) :
