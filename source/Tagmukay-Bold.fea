@@ -1,0 +1,179 @@
+
+
+#**********************************
+#  Glyph classes
+#**********************************
+
+@GDEF_Simple = [.notdef space exclam quotedbl numbersign dollar percent ampersand quotesingle parenleft
+parenright asterisk plus comma hyphen period slash zero one two three four five six seven eight nine
+colon semicolon less equal greater question at A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 
+bracketleft backslash bracketright asciicircum underscore grave a b c d e f g h i j k l m n o p q r s t 
+u v w x y z braceleft bar braceright asciitilde Euro quotesinglbase florin quotedblbase ellipsis dagger 
+daggerdbl circumflex perthousand Scaron guilsinglleft OE Zcaron quoteleft quoteright quotedblleft 
+quotedblright bullet endash emdash tilde trademark scaron guilsinglright oe zcaron Ydieresis uni00A0 
+exclamdown cent sterling currency yen brokenbar section dieresis copyright ordfeminine guillemotleft 
+logicalnot uni00AD registered macron degree plusminus twosuperior threesuperior acute mu paragraph
+periodcentered cedilla onesuperior ordmasculine guillemotright onequarter onehalf threequarters
+questiondown Agrave Aacute Acircumflex Atilde Adieresis Aring AE Ccedilla Egrave Eacute Ecircumflex
+Edieresis Igrave Iacute Icircumflex Idieresis Eth Ntilde Ograve Oacute Ocircumflex Otilde Odieresis
+multiply Oslash Ugrave Uacute Ucircumflex Udieresis Yacute Thorn germandbls agrave aacute
+acircumflex atilde adieresis aring ae ccedilla egrave eacute ecircumflex edieresis igrave iacute
+icircumflex idieresis eth ntilde ograve oacute ocircumflex otilde odieresis divide oslash ugrave uacute
+ucircumflex udieresis yacute thorn ydieresis Abreve abreve Ebreve ebreve Ibreve ibreve Obreve obreve
+Ubreve ubreve uni018E uni01DD uni0194 uni0263 Eng.UCStyle eng uni1E04 uni1E05 uni1E0C uni1E0D
+uni1E24 uni1E25 uni1E32 uni1E33 uni1E36 uni1E37 uni1E42 uni1E43 uni1E46 uni1E47 uni1E5A uni1E5B
+uni1E62 uni1E63 uni1E6C uni1E6D uni1E88 uni1E89 uni1E92 uni1E93 uni1EF4 uni1EF5 uni0327 uni2009
+uni200B uni200C uni200D uni202F uni25CC 
+
+a.alt agrave.alt aacute.alt acircumflex.alt atilde.alt abreve.alt adieresis.alt aring.alt g.alt
+
+uni2D30 uni2D67 uni2D53 uni2D46 uni2D3E uni2D57 uni2D48 uni2D42 uni2D4F uni2D4D uni2D51
+uni2D36 uni2D4F.slant uni2D4D.slant uni2D64 uni2D5C uni2D62 uni2D49 uni2D54 uni2D59 uni2D40
+uni2D4E uni2D39 uni2D3C uni2D4C uni2D5B uni2D63 uni2D70 uni2D7F ];
+
+@GDEF_Ligature = [uni2D300302 uni2D300306 uni2D670302 uni2D530302 uni2D4F2D7F2D57
+uni2D4F2D7F2D36 uni2D4F2D7F2D3E uni2D4F2D7F2D64 uni2D4F2D7F2D5C uni2D620302 uni2D620323
+uni2D4D2D7F2D5C uni2D542D7F2D5C uni2D592D7F2D5C uni2D4F2D7F2D59 uni2D4E2D7F2D40
+uni2D4E2D7F2D5C uni2D4E2D7F2D59 uni2D4F2D7F2D3C uni2D4F2D7F2D3C2D7F2D5C
+uni2D3C2D7F2D5C uni2D4F2D7F2D4C uni2D4F2D7F2D39 uni2D4F2D7F2D4C.alt uni2D5B2D7F2D5C ];
+
+@GDEF_Mark = [gravecomb acutecomb uni0302 tildecomb uni0304 uni0305 uni0306 uni0307 uni0308
+uni030A uni030C dotbelowcomb ];
+
+
+#**********************************
+#  Glyphs
+#**********************************
+
+table GDEF {
+GlyphClassDef
+    @GDEF_Simple, @GDEF_Ligature, @GDEF_Mark, ;
+ } GDEF;
+
+
+#**********************************
+#  Mark Classes
+#**********************************
+
+
+
+#**********************************
+#  Language Systems
+#**********************************
+
+languagesystem DFLT dflt ;
+languagesystem latn dflt ;
+languagesystem tfng dflt ;
+
+
+#**********************************
+#  Lookups
+#**********************************
+
+lookup TfnBiconsonants {
+  lookupflag 0 ;
+    sub uni2D4F uni2D7F uni2D3C uni2D7F uni2D5C by uni2D4F2D7F2D3C2D7F2D5C ;
+    sub uni2D3C uni2D7F uni2D5C by uni2D3C2D7F2D5C ;
+    sub uni2D4D uni2D7F uni2D5C by uni2D4D2D7F2D5C ;
+    sub uni2D4E uni2D7F uni2D40 by uni2D4E2D7F2D40 ;
+    sub uni2D4E uni2D7F uni2D59 by uni2D4E2D7F2D59 ;
+    sub uni2D4E uni2D7F uni2D5C by uni2D4E2D7F2D5C ;
+    sub uni2D4F uni2D7F uni2D36 by uni2D4F2D7F2D36 ;
+    sub uni2D4F uni2D7F uni2D39 by uni2D4F2D7F2D39 ;
+    sub uni2D4F uni2D7F uni2D3C by uni2D4F2D7F2D3C ;
+    sub uni2D4F uni2D7F uni2D3E by uni2D4F2D7F2D3E ;
+    sub uni2D4F uni2D7F uni2D4C by uni2D4F2D7F2D4C ;
+    sub uni2D4F uni2D7F uni2D57 by uni2D4F2D7F2D57 ;
+    sub uni2D4F uni2D7F uni2D59 by uni2D4F2D7F2D59 ;
+    sub uni2D4F uni2D7F uni2D5C by uni2D4F2D7F2D5C ;
+    sub uni2D4F uni2D7F uni2D64 by uni2D4F2D7F2D64 ;
+    sub uni2D54 uni2D7F uni2D5C by uni2D542D7F2D5C ;
+    sub uni2D59 uni2D7F uni2D5C by uni2D592D7F2D5C ;
+    sub uni2D5B uni2D7F uni2D5C by uni2D5B2D7F2D5C ;
+} TfnBiconsonants;
+
+lookup TfnSlants_target {
+  lookupflag 0 ;
+    sub uni2D4D by uni2D4D.slant ;
+    sub uni2D4F by uni2D4F.slant ;
+} TfnSlants_target ;
+
+lookup TfnSlants {
+  lookupflag 0 ;
+    sub uni2D4D [ uni2D4D uni2D4F ]' lookup TfnSlants_target ;
+    sub uni2D4F [ uni2D4D uni2D4F ]' lookup TfnSlants_target ;
+} TfnSlants;
+
+lookup TfnSILvowels {
+  lookupflag 0 ;
+    sub uni2D30 uni0302 by uni2D300302 ;
+    sub uni2D62 uni0302 by uni2D620302 ;
+    sub uni2D62 dotbelowcomb by uni2D620323 ;
+    sub uni2D67 uni0302 by uni2D670302 ;
+    sub uni2D30 uni0306 by uni2D300306 ;
+    sub uni2D53 uni0302 by uni2D530302 ;
+} TfnSILvowels;
+
+lookup TfnBiconsonantsAlt {
+  lookupflag 0 ;
+    sub uni2D4F2D7F2D4C by uni2D4F2D7F2D4C.alt ;
+} TfnBiconsonantsAlt;
+
+lookup LtnAlternates {
+  lookupflag 0 ;
+    sub a by a.alt ;
+    sub agrave by agrave.alt ;
+    sub aacute by aacute.alt ;
+    sub acircumflex by acircumflex.alt ;
+    sub atilde by atilde.alt ;
+    sub abreve by adieresis.alt ;
+    sub adieresis by abreve.alt ;
+    sub aring by aring.alt ;
+    sub g by g.alt ;
+} LtnAlternates;
+
+
+#**********************************
+#  Features
+#**********************************
+
+feature aalt {  # Access All Alternates
+    script latn;  # Latin
+        language dflt;  # Default
+            lookup LtnAlternates;
+} aalt ;
+
+feature calt {  # Contextual Alternates
+    script DFLT;  # Default
+        language dflt;  # Default
+            lookup TfnSlants;
+    script tfng;  # Tifinagh
+        language dflt;  # Default
+            lookup TfnSlants;
+} calt ;
+
+feature liga {  # Standard Ligatures
+    script DFLT;  # Default
+        language dflt;  # Default
+            lookup TfnBiconsonants;
+            lookup TfnSILvowels;
+    script tfng;  # Tifinagh
+        language dflt;  # Default
+            lookup TfnBiconsonants;
+            lookup TfnSILvowels;
+} liga ;
+
+feature ss01 {  # Stylistic Set 1
+    script DFLT;  # Default
+        language dflt;  # Default
+            lookup TfnBiconsonantsAlt;
+    script tfng;  # Tifinagh
+        language dflt;  # Default
+            lookup TfnBiconsonantsAlt;
+} ss01 ;
+
+feature ss02 {  # Stylistic Set 2
+    script latn;  # Latin
+        language dflt;  # Default
+            lookup LtnAlternates;
+} ss02 ;
