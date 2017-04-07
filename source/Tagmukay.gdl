@@ -187,8 +187,8 @@ endtable;  // glyph
 
 table(feature)
 
-enja {
-	id = "enja";	
+ss01 {
+	id = "ss01";	
 	name.1033 = string("Enja alternate");
 	default = ffalse;
     settings {
@@ -204,8 +204,8 @@ enja {
 }
 
 // Roman alternates
-ralt {
-	id = "ralt";	
+ss02 {
+	id = "ss02";	
 	name.1033 = string("Lowercase a and g alternates");
 	default = ffalse;
     settings {
@@ -264,13 +264,13 @@ pass(2)
 g_2D4D_slant tifBiConsJnr  tifYat    >  lig_2D4D_2D5C:(1 2 3) {comp {cons1.ref = @1; join.ref = @2; cons2.ref = @3}}  _  _ ;
 g_2D4F_slant  tifBiConsJnr  cPostYan  >  _  _  cYanPlus:(1 2 3) {comp {cons1.ref = @1; join.ref = @2; cons2.ref = @3}} ;
 
-if (enja)
+if (ss01)
 
 lig_2D4F_2D4C  >  lig_2D4F_2D4C_alt;
 
 endif;
 
-if (ralt)
+if (ss02)
 
 c_a_g  >  c_a_g_alt;
 
