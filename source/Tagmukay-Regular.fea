@@ -152,6 +152,17 @@ feature calt {  # Contextual Alternates
             lookup TfnSlants;
 } calt ;
 
+feature ccmp {  # Glyph Composition/Decomposition (for compatibility with Microsoft Word)
+    script DFLT;  # Default
+        language dflt;  # Default
+            lookup TfnBiconsonants;
+            lookup TfnSILvowels;
+    script tfng;  # Tifinagh
+        language dflt;  # Default
+            lookup TfnBiconsonants;
+            lookup TfnSILvowels;
+} ccmp ;
+
 feature liga {  # Standard Ligatures
     script DFLT;  # Default
         language dflt;  # Default
