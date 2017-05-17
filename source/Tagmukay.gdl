@@ -7,9 +7,21 @@
 ////////////////////////////////////////////////////////////////////////////////////////////
 
 /*
+	This file is part of the Tagmukay font family (http://software.sil.org/tagmukay/) 
+	and is Copyright (c) 2006-2017 SIL International (http://www.sil.org/), with 
+	Reserved Font Names "Tagmukay" and "SIL".
+	
+	This Font Software is licensed under the SIL Open Font License, Version 1.1. 
+	You should have received a copy of the license along with this Font Software. 
+	If this is not the case, go to (http://scripts.sil.org/OFL) for all the details 
+	including a FAQ.
+*/
+
+/*
 Change history:
 SJC 2006-July	File created.
 SCJ 2011-Oct    Reworked
+JDC 2013-07-05	Added rules for biconsonants and slants
 */
 
 
@@ -187,7 +199,7 @@ endtable;  // glyph
 
 table(feature)
 
-ss01 {
+enja {
 	id = "ss01";	
 	name.1033 = string("Enja alternate");
 	default = ffalse;
@@ -204,7 +216,7 @@ ss01 {
 }
 
 // Roman alternates
-ss02 {
+ralt {
 	id = "ss02";	
 	name.1033 = string("Lowercase a and g alternates");
 	default = ffalse;
@@ -264,13 +276,13 @@ pass(2)
 g_2D4D_slant tifBiConsJnr  tifYat    >  lig_2D4D_2D5C:(1 2 3) {comp {cons1.ref = @1; join.ref = @2; cons2.ref = @3}}  _  _ ;
 g_2D4F_slant  tifBiConsJnr  cPostYan  >  _  _  cYanPlus:(1 2 3) {comp {cons1.ref = @1; join.ref = @2; cons2.ref = @3}} ;
 
-if (ss01)
+if (enja)  // id = ss01
 
 lig_2D4F_2D4C  >  lig_2D4F_2D4C_alt;
 
 endif;
 
-if (ss02)
+if (ralt) // id = ss02
 
 c_a_g  >  c_a_g_alt;
 
