@@ -1,0 +1,14 @@
+2017-05-19 15:11:50 Progress: Opening file for input: source/psnames.csv
+2017-05-19 15:11:50 Warning:  nonmarkingreturnin font but not csv file
+2017-05-19 15:11:50 Warning:  CombTildein font but not csv file
+2017-05-19 15:11:50 Warning:  CombMacronin font but not csv file
+2017-05-19 15:11:50 Warning:  CombDotAbvin font but not csv file
+2017-05-19 15:11:50 Warning:  CombCaronin font but not csv file
+2017-05-19 15:11:50 Error:    Font glyph names missing from csv - see log for details
+2017-05-19 15:11:50 Warning:  CRin csv but not in font
+2017-05-19 15:11:50 Warning:  tildenospin csv but not in font
+2017-05-19 15:11:50 Warning:  macronnospin csv but not in font
+2017-05-19 15:11:50 Warning:  dotnospin csv but not in font
+2017-05-19 15:11:50 Warning:  haceknospin csv but not in font
+2017-05-19 15:11:50 Error:    csv file names missing from font - see log for details
+2017-05-19 15:11:50 Progress: Saving font to source/Tagmukay-Bold-source.ttf

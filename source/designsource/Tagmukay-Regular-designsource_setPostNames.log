@@ -1,0 +1,6 @@
+2017-05-19 15:11:50 Progress: Opening file for input: source/psnames.csv
+2017-05-19 15:11:50 Warning:  nonmarkingreturnin font but not csv file
+2017-05-19 15:11:50 Error:    Font glyph names missing from csv - see log for details
+2017-05-19 15:11:50 Warning:  CRin csv but not in font
+2017-05-19 15:11:50 Error:    csv file names missing from font - see log for details
+2017-05-19 15:11:50 Progress: Saving font to source/Tagmukay-Regular-source.ttf

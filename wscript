@@ -25,7 +25,7 @@ for ext in ('-Regular', '-Bold') :
 	fbase = 'Tagmukay' + ext
 	font (target = process('Tagmukay' + ext + '.ttf', name('Tagmukay Beta'),
                  cmd('${TTFAUTOHINT} -n -W ${DEP} ${TGT}')),
-		source = 'source/' + fbase + '-nosmarts.ttf',
+		source = 'source/' + fbase + '-source.ttf',
 		version = TTF_VERSION,
 		copyright = COPYRIGHT,
 #		opentype = volt ( 'source/' + 'VOLT_' +  fbase + '.vtp', no_make = 1),

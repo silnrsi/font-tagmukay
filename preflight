@@ -1,0 +1,10 @@
+#!/bin/sh
+# Sample script for calling multiple routines on a project, typically prior to committing to a repository.
+# Place this in root of a project, adjust the font path, then set it to be executable by typing:
+# chmod +x preflight
+
+# IMPORTANT! Run "./preflight" command every time the designsource changes.
+
+# Change postscript glyph names from designer names to Adobe names for compatibility with .gdl and .fea files
+./tools/FFchangeGlyphNames.py -i source/psnames.csv source/designsource/Tagmukay-Regular-designsource.ttf source/Tagmukay-Regular-source.ttf
+./tools/FFchangeGlyphNames.py -i source/psnames.csv source/designsource/Tagmukay-Bold-designsource.ttf source/Tagmukay-Bold-source.ttf
