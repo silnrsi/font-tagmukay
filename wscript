@@ -1,24 +1,25 @@
 #!/usr/bin/python
 # encoding: utf-8
+# this is a smith configuration file
 
 # set the default output folders
 out="results"
-DOCDIR="documentation"
+DOCDIR=["documentation", "web"]
 OUTDIR="installers"
 ZIPDIR="releases"
 TESTDIR='tests'
-TESTRESULTSDIR = 'tests'
-STANDARDS = 'tests/standards'
+TESTRESULTSDIR='tests'
+STANDARDS='tests/standards'
 
 # set the font name, version, licensing and description
-APPNAME = 'Tagmukay'
-VERSION = '2.000'
-TTF_VERSION = '2.000'
+APPNAME='Tagmukay'
+VERSION='2.000'
+TTF_VERSION=VERSION
 COPYRIGHT='Copyright (c) 2006-2017 SIL International, all rights reserved'
 LICENSE='OFL.txt'	
 DESC_SHORT='Tifinagh Unicode TrueType font with OT and Graphite support'
 
-DEBPKG = 'fonts-sil-tagmukay'
+DEBPKG='fonts-sil-tagmukay'
 
 
 for ext in ('-Regular', '-Bold') :
