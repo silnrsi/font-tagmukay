@@ -21,12 +21,16 @@ DESC_SHORT='Tifinagh Unicode TrueType font with OT and Graphite support'
 
 DEBPKG='fonts-sil-tagmukay'
 
+import os
+tools = os.path.abspath('tools/')
 
 for ext in ('-Regular', '-Bold') :
 	fbase = 'Tagmukay' + ext
 	font (target = process('Tagmukay' + ext + '.ttf', name('Tagmukay Beta'),
                  cmd('${TTFAUTOHINT} -n -W ${DEP} ${TGT}')),
-		source = 'source/' + fbase + '-source.ttf',
+		#process: changes designer glyph names (in source ttf) to Adobe glyph names which are in fea and gdl
+		source = process('source/' + fbase + '-source.ttf',
+				cmd('${FFCHANGEGLYPHNAMES.PY} -i ../source/psnames.csv ${DEP} ${TGT}')),
 		version = TTF_VERSION,
 		copyright = COPYRIGHT,
 #		opentype = volt ( 'source/' + 'VOLT_' +  fbase + '.vtp', no_make = 1),
@@ -39,4 +43,4 @@ for ext in ('-Regular', '-Bold') :
 
 def configure(ctx) :
     ctx.find_program('ttfautohint')
-
+    ctx.find_program('FFchangeGlyphNames.py', path_list = tools) #script from pysilfont
