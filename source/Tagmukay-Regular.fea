@@ -148,9 +148,7 @@ lookup LtnAlternates {
 #**********************************
 
 feature aalt {  # Access All Alternates
-    script latn;  # Latin
-        language dflt;  # Default
-            lookup LtnAlternates;
+    feature ss02;
 } aalt ;
 
 feature calt {  # Contextual Alternates
