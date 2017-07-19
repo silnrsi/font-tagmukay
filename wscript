@@ -19,6 +19,13 @@ COPYRIGHT='Copyright (c) 2006-2017 SIL International, all rights reserved'
 LICENSE='OFL.txt'
 DESC_SHORT='Tifinagh Unicode TrueType font with OT and Graphite support'
 
+DESC_LONG='''
+Tagmukay is a Shifinagh (also know as Tifinagh) script font with support for the 
+Tawallammat Tamajaq language. It is a Unicode-based font that features 
+bi-consonant ligatures and alternate forms necessary to support this language. 
+It has Graphite and OpenType tables that have the logic to support these features.
+'''
+
 DEBPKG='fonts-sil-tagmukay'
 
 # os/2 bits for the font since FontLab 5.2 doesn't provide the bit for Tifinagh
@@ -36,7 +43,6 @@ for style in ('-Regular', '-Bold') :
             cmd('ffchangeglyphnames -i ' + psnames + ' ${DEP} ${TGT}')),
         version = TTF_VERSION,
         copyright = COPYRIGHT,
-#        opentype = volt ( 'source/' + 'VOLT_' +  fontbase + '.vtp', no_make = 1),
         opentype = fea ( 'source/' +  fontbase + '.fea', no_make = 1),
         graphite = gdl ( 'source/Tagmukay.gdl', no_make = 1),
         script = ['tfng'],
