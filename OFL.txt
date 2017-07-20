@@ -1,5 +1,5 @@
-Copyright (c) 2006-2017 SIL International (http://www.sil.org/),,
-with Reserved Font Name "Tagmukay".
+Copyright (c) 2006-2017 SIL International (http://www.sil.org/), 
+with Reserved Font Name "Tagmukay" and "SIL".
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
 This license is copied below, and is also available with a FAQ at:
