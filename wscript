@@ -36,7 +36,7 @@ psnames = '../source/psnames.csv'
 
 for style in ('-Regular', '-Bold') :
     fontbase = 'Tagmukay' + style
-    font (target = process(fontbase + '.ttf', name('Tagmukay Beta'),
+    font (target = process(fontbase + '.ttf', name('Tagmukay'),
             cmd('hackos2 -q -u ' + os2bits + ' ${DEP} ${TGT}'),
             cmd('${TTFAUTOHINT} -n -W ${DEP} ${TGT}')),
         source = process('source/' + fontbase + '-source.ttf',
