@@ -21,9 +21,9 @@ DESC_SHORT='Tifinagh Unicode TrueType font with OT and Graphite support'
 
 DESC_LONG='''
 Tagmukay is a Shifinagh (also know as Tifinagh) script font with support for the 
-Tawallammat Tamajaq language. It is a Unicode-based font that features 
-bi-consonant ligatures and alternate forms necessary to support this language. 
-It has Graphite and OpenType tables that have the logic to support these features.
+Tawallammat Tamajaq language. It is a Unicode font that features bi-consonant 
+ligatures and alternate forms necessary to support this language. It has Graphite 
+and OpenType tables that have the logic to support these features.
 '''
 
 DEBPKG='fonts-sil-tagmukay'
