@@ -19,11 +19,11 @@ See the FONTLOG for information on this and previous releases.
 TIPS
 ====
 
-We cannot afford to offer free technical support. The font has been tested 
+We cannot afford to offer no-cost technical support. The font has been tested 
 and shown to work on Windows 10.
 
-If you do find a problem, please do report it to fonts@sil.org. We can't 
-guarantee any direct response, but will try to fix reported bugs in future 
+If you do find a problem, please do report it to http://software.sil.org/tagmukay/support/. 
+We can't guarantee any direct response, but will try to fix reported bugs in future 
 versions.
 
 Many problems can be solved, or at least explained, through an understanding
@@ -42,7 +42,7 @@ install the appropriate keyboard and input method for the characters of the
 language you wish to use. You will need to install the appropriate keyboard and 
 input method for the characters of the language you wish to use. If you want to 
 enter characters that are not supported by any system keyboard, the Keyman 
-program (www.tavultesoft.com) can be helpful on Windows systems. Also available 
+program (www.keyman.com) can be helpful on Windows systems. Also available 
 for Windows is MSKLC (http://www.microsoft.com/globaldev/tools/msklc.mspx). For 
 other platforms, KMFL (http://kmfl.sourceforge.net/), 
 XKB (http://www.x.org/wiki/XKB) or Ukelele (http://scripts.sil.org/ukelele) 

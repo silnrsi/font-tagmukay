@@ -4,7 +4,7 @@ Tagmukay-WOFF-metadata.xml
 
 This file is part of Tagmukay font family (http://scripts.sil.org/tagmukay)
 and is Copyright (c) 2006-2017 SIL International (http://www.sil.org/),
-with Reserved Font Names "Tagmukay". This Font Software is licensed
+with Reserved Font Names "Tagmukay" and "SIL". This Font Software is licensed
 under the SIL Open Font License, Version 1.1. You should have received a copy
 of the license along with this Font Software. If this is not the case, go to
 (http://scripts.sil.org/OFL) for all the details including a FAQ.
@@ -14,7 +14,7 @@ of the license along with this Font Software. If this is not the case, go to
     <vendor name="SIL International" url="http://scripts.sil.org" />
     <credits>
         <credit
-            name="Jonathan Coblentz"
+            name="Peter Martin"
             url="http://scripts.sil.org/"
             role="Glyph Designer" />
         <credit
@@ -50,8 +50,18 @@ of the license along with this Font Software. If this is not the case, go to
             ---------
             (This should list both major and minor changes, most recent first.)
 
-            18 Nov 2014 (SIL NRSI team)  Tagmukay version 1.000
-            - Released private version under the SIL Open Font License
+            21 July 2017 (SIL NRSI team)  Tagmukay version 2.000 
+            - Public release version under the OFL
+            - Improved font hinting (using ttfautohint)
+            - Fixed minor bugs in OpenType and Graphite code
+            - Added GDEF classes
+            - Renamed Graphite features to match OpenType features (ss01 and ss02)
+            - Corrected glyph names in Regular font
+            - Corrected glyph order in Bold font to match Regular
+            - Added WOFF support and fonts
+
+            22 Jan 2014 (SIL NRSI team)  Tagmukay version 1.000 
+            - Private distribution version under the OFL
         </text>
     </description>
     <license url="http://scripts.sil.org/OFL"
@@ -154,7 +164,7 @@ of the license along with this Font Software. If this is not the case, go to
         </text>
     </license>
     <copyright>
-        <text lang="en">Copyright (c) 2003-2014 SIL International (http://www.sil.org/)</text>
+        <text lang="en">Copyright (c) 2003-2017 SIL International (http://www.sil.org/)</text>
     </copyright>
     <trademark>
         <text lang="en">Tagmukay is a trademark of SIL International</text>

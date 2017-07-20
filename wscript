@@ -15,7 +15,7 @@ STANDARDS='tests/standards'
 APPNAME='Tagmukay'
 VERSION='2.000'
 TTF_VERSION=VERSION
-COPYRIGHT='Copyright (c) 2006-2017 SIL International, all rights reserved'
+COPYRIGHT='Copyright (c) 2006-2017 SIL International'
 LICENSE='OFL.txt'
 DESC_SHORT='Tifinagh Unicode TrueType font with OT and Graphite support'
 

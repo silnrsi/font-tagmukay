@@ -17,8 +17,7 @@ issues such as the formation of ligatures are handled by the font, provided you
 are running an application that provides an adequate level of support for one of 
 these smart font technologies.
 
-SIL International is the creator of the Tagmukay fonts, and is the owner
-of all proprietary rights therein.
+SIL International is the creator of the Tagmukay fonts.
 
 
 A Note Regarding the Open Font License
@@ -65,7 +64,7 @@ D: Font engineer (Graphite)
 N: Peter Martin
 E: fonts@sil.org
 W: http://scripts.sil.org/
-D: Font designer
+D: Glyph designer
 
 The Tagmukay project is maintained by SIL International.
 
