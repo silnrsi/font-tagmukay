@@ -1,6 +1,6 @@
 .notdef,.notdef
-.null,.null
-CR,CR
+.null,uni0000
+CR,uni000D
 space,space
 ExclamationMrk,exclam
 QuotMrk,quotedbl
@@ -343,4 +343,3 @@ TifLigTuarEshta,uni2D5B2D7F2D5C
 TifLtrYaz,uni2D63
 TifPuncTazarast,uni2D70
 TifConsJoiner,uni2D7F
-nonmarkingreturn,nonmarkingreturn

@@ -30,8 +30,6 @@ DEBPKG='fonts-sil-tagmukay'
 
 # os/2 bits for the font since FontLab 5.2 doesn't provide the bit for Tifinagh
 os2bits = "00000004000000000000200AA000007F"
-# data file to change designer glyph names (in -source ttf) to Adobe glyph names which are used in fea and gdl
-psnames = '../source/psnames.csv'
 
 
 for style in ('-Regular', '-Bold') :
@@ -39,8 +37,7 @@ for style in ('-Regular', '-Bold') :
     font (target = process(fontbase + '.ttf', name('Tagmukay'),
             cmd('hackos2 -q -u ' + os2bits + ' ${DEP} ${TGT}'),
             cmd('${TTFAUTOHINT} -n -W ${DEP} ${TGT}')),
-        source = process('source/' + fontbase + '-source.ttf',
-            cmd('ffchangeglyphnames -i ' + psnames + ' ${DEP} ${TGT}')),
+        source = 'source/' + fontbase + '-source.ttf',
         version = TTF_VERSION,
         copyright = COPYRIGHT,
         license = ofl('Tagmukay', 'SIL'),

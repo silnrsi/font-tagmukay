@@ -31,7 +31,7 @@ ChangeLog
 ---------
 (This should list both major and minor changes, most recent first.)
 
-20 July 2017 (SIL NRSI team)  Tagmukay version 2.000 
+21 July 2017 (SIL NRSI team)  Tagmukay version 2.000 
 - Public release version under the OFL
 - Improved font hinting (using ttfautohint)
 - Fixed minor bugs in OpenType and Graphite code
