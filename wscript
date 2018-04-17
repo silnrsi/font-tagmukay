@@ -42,7 +42,9 @@ for style in ('-Regular', '-Bold') :
         copyright = COPYRIGHT,
         license = ofl('Tagmukay', 'SIL'),
         opentype = fea ( 'source/' +  fontbase + '.fea', no_make = 1),
-        graphite = gdl ( 'source/Tagmukay.gdl', no_make = 1),
+        graphite = gdl ( 'source/Tagmukay.gdl',
+                        params = '-q -e gdlerr' + style + '.txt', no_make='1'
+                       ),
         script = ['tfng'],
         pdf = fret(),
         woff = woff('web/Tagmukay' + style + '.woff', params = '-v ' + VERSION + ' -m ../source/Tagmukay-WOFF-metadata.xml'),
